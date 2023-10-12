@@ -1,4 +1,4 @@
-using System;
+//using System;
 
 
 namespace R5T.S0105
@@ -7,7 +7,13 @@ namespace R5T.S0105
     {
         static void Main()
         {
-            Console.WriteLine("Hello World!");
+            //Scripts.Instance.Generate_SignatureString();
+            //Scripts.Instance.Parse_SignatureString();
+            //Scripts.Instance.RoundTrip_SignatureString();
+            //Scripts.Instance.GenerateAndRoundTrip_SignatureStrings();
+            //Scripts.Instance.GenerateAndCheck_ExampleMemberSignatureStrings();
+            //Scripts.Instance.GenerateAndCheck_DotnetPackMemberSignatureStrings();
+            Scripts.Instance.RoundTrip_Signatures_ToSignatureStrings();
         }
     }
 }
