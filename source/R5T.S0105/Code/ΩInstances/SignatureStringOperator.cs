@@ -17,21 +17,3 @@ namespace R5T.S0105
         #endregion
     }
 }
-
-
-namespace R5T.S0105
-{
-    public class SignatureStringOperator_New : ISignatureStringOperator_New
-    {
-        #region Infrastructure
-
-        public static ISignatureStringOperator_New Instance { get; } = new SignatureStringOperator_New();
-
-
-        private SignatureStringOperator_New()
-        {
-        }
-
-        #endregion
-    }
-}

@@ -20,9 +20,8 @@ namespace R5T.S0105
         public static IOperator Operator => S0105.Operator.Instance;
         public static IOperations Operations => S0105.Operations.Instance;
         public static L0057.IReflectionOperator ReflectionOperator => L0057.ReflectionOperator.Instance;
-        public static ISignatureOperator_New SignatureOperator_New => S0105.SignatureOperator_New.Instance;
-        public static ISignatureOperator_Old SignatureOperator_Old => S0105.SignatureOperator_Old.Instance;
-        public static ISignatureStringOperator_New SignatureStringOperator_New => S0105.SignatureStringOperator_New.Instance;
+        public static L0065.ISignatureOperator SignatureOperator => L0065.SignatureOperator.Instance;
+        public static L0065.ISignatureStringOperator SignatureStringOperator => L0065.SignatureStringOperator.Instance;
         public static ISignatureStringOperator_Old SignatureStringOperator_Old => S0105.SignatureStringOperator_Old.Instance;
         public static L0063.Z001.Platform.Raw.ISignatureStrings SignatureStrings_Raw => L0063.Z001.Platform.Raw.SignatureStrings.Instance;
         public static L0053.IStringOperator StringOperator => L0053.StringOperator.Instance;

@@ -72,9 +72,9 @@ namespace R5T.S0105
 
                             try
                             {
-                                var signature = Instances.SignatureOperator_New.Get_Signature(memberInfo);
+                                var signature = Instances.SignatureOperator.Get_Signature(memberInfo);
 
-                                var signatureString = Instances.SignatureOperator_New.Get_SignatureString(signature);
+                                var signatureString = Instances.SignatureOperator.Get_SignatureString(signature);
 
                                 //// For debugging.
                                 //if (signatureString.Value != "M:System.Collections.Concurrent.BlockingCollection<`T>.System#Collections#Generic#IEnumerable{T}#GetEnumerator()~System.Collections.Generic.IEnumerator<`T>")
@@ -82,7 +82,7 @@ namespace R5T.S0105
                                 //    return;
                                 //}
 
-                                var roundTrippedSignature = Instances.SignatureStringOperator_New.Get_Signature(signatureString);
+                                var roundTrippedSignature = Instances.SignatureStringOperator.Get_Signature(signatureString);
 
                                 var pair = new SignatureStringIdentityPair
                                 {
@@ -90,11 +90,11 @@ namespace R5T.S0105
                                     SignatureString = signatureString,
                                 };
 
-                                var areEqual = Instances.SignatureOperator_New.Are_Equal_ByValue(
+                                var areEqual = Instances.SignatureOperator.Are_Equal_ByValue(
                                     signature,
                                     roundTrippedSignature);
 
-                               if (areEqual)
+                                if (areEqual)
                                 {
                                     result.Successes.Add(pair);
                                 }
@@ -102,7 +102,6 @@ namespace R5T.S0105
                                 {
                                     result.Failures.Add(pair);
                                 }
-
                             }
                             catch(Exception)
                             {
@@ -143,9 +142,9 @@ namespace R5T.S0105
 
 
             /// Run.
-            var signature = Instances.SignatureStringOperator_Old.Get_Signature(signatureString);
+            var signature = Instances.SignatureStringOperator.Get_Signature(signatureString);
 
-            var roundTrippedSignatureString = Instances.SignatureOperator_Old.Get_SignatureString(signature);
+            var roundTrippedSignatureString = Instances.SignatureOperator.Get_SignatureString(signature);
 
             var areEqual = signatureString.Equals(roundTrippedSignatureString.Value);
 
@@ -172,7 +171,7 @@ namespace R5T.S0105
 
 
             /// Run.
-            var signature = Instances.SignatureStringOperator_Old.Get_Signature(signatureString);
+            var signature = Instances.SignatureStringOperator.Get_Signature(signatureString);
 
             Console.WriteLine(signature);
         }
@@ -197,8 +196,8 @@ namespace R5T.S0105
             {
                 var identityString = Instances.IdentityStringOperator.Get_IdentityString(member);
                 var signatureString = Instances.SignatureStringOperator_Old.Get_SignatureString(member);
-                var signature = Instances.SignatureStringOperator_Old.Get_Signature(signatureString);
-                var roundTrippedSignatureString = Instances.SignatureOperator_Old.Get_SignatureString(signature);
+                var signature = Instances.SignatureStringOperator.Get_Signature(signatureString);
+                var roundTrippedSignatureString = Instances.SignatureOperator.Get_SignatureString(signature);
 
                 results.Add((identityString, signatureString, roundTrippedSignatureString));
             }
@@ -379,10 +378,10 @@ namespace R5T.S0105
                                 };
 
                                 // Structure the signature string.
-                                var signature = Instances.SignatureStringOperator_Old.Get_Signature(signatureString);
+                                var signature = Instances.SignatureStringOperator.Get_Signature(signatureString);
 
                                 // Then generate an identity string from the structure.
-                                IIdentityString identityStringFromStructuredSignatureString = Instances.SignatureOperator_Old.Get_IdentityString(signature);
+                                IIdentityString identityStringFromStructuredSignatureString = Instances.SignatureOperator.Get_IdentityString(signature);
 
                                 // Check the two identity strings for equality.
                                 var areEqual = identityString.Equals(identityStringFromStructuredSignatureString);

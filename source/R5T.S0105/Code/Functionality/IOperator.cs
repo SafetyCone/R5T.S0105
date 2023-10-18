@@ -66,9 +66,9 @@ namespace R5T.S0105
             IIdentityString identityString,
             out IIdentityString identityStringFromStructuredSignatureString)
         {
-            var signature = Instances.SignatureStringOperator_Old.Get_Signature(signatureString);
+            var signature = Instances.SignatureStringOperator.Get_Signature(signatureString);
 
-            identityStringFromStructuredSignatureString = Instances.SignatureOperator_Old.Get_IdentityString(signature);
+            identityStringFromStructuredSignatureString = Instances.SignatureOperator.Get_IdentityString(signature);
 
             // Check the two identity strings for equality.
             var output = identityString.Equals(identityStringFromStructuredSignatureString);
