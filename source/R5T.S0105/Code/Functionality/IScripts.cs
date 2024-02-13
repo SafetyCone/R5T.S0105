@@ -155,7 +155,7 @@ namespace R5T.S0105
                 ;
 
             Instances.FileOperator.Write_Lines_Synchronous(
-                outputFilePath.Value,
+                outputFilePath,
                 lines);
 
             Instances.NotepadPlusPlusOperator.Open(outputFilePath);
@@ -239,7 +239,7 @@ namespace R5T.S0105
                 ;
 
             Instances.FileOperator.Write_Lines_Synchronous(
-                outputFilePath.Value,
+                outputFilePath,
                 lines);
 
             Instances.NotepadPlusPlusOperator.Open(outputFilePath);
@@ -274,7 +274,7 @@ namespace R5T.S0105
             var signatureString = Instances.SignatureStringOperator_Old.Get_SignatureString(member);
 
             Instances.FileOperator.Write_Lines_Synchronous(
-                outputFilePath.Value,
+                outputFilePath,
                 Instances.EnumerableOperator.From(
                     identityString.Value,
                     signatureString.Value));
