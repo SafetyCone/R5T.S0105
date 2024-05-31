@@ -3,6 +3,9 @@
 
 namespace R5T.S0105
 {
+    /// <summary>
+    /// R5T.S0105 - Signature string scripts.
+    /// </summary>
     class Program
     {
         static void Main()
